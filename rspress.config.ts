@@ -10,7 +10,6 @@ export default defineConfig({
     light: "/rspress-light-logo.png",
     dark: "/rspress-dark-logo.png",
   },
-  base: '/myblog/',
   themeConfig: {
     socialLinks: [
       { icon: 'github', mode: 'link', content: 'https://github.com/MagicalBridge' },
