@@ -157,11 +157,64 @@ data，使我们平时用到的最多的属性，我们会再上面挂载一些�
 ### 1.初始化数据
 
 ```js
-import {observe} from './observer/index.js'
+// 将响应式的模块单独抽离出来
+import { observe } from './observer/index.js'
 
 function initData(vm) {
   let data = vm.$options.data;
+  // 这个data可以写成一个对象，也可以写成一个函数，这个时候需要进行兼容处理
+  // 如果是函数的话，我就取它的返回值，如果是对象的话，就直接使用对象
   data = vm._data = typeof data === 'function' ? data.call(vm) : data;
+  // vue2中会将data中的所有数据进行数据劫持
   observe(data);
 }
 ```
+
+### 2.递归属性劫持
+
+```js
+class Observer { // 观测值
+  constructor(value){
+    this.walk(value);
+  }
+  walk(data){ // 让对象上的所有属性依次进行观测
+    let keys = Object.keys(data);
+    for(let i = 0; i < keys.length; i++){
+      let key = keys[i];
+      let value = data[key];
+      defineReactive(data,key,value);
+    }
+  }
+}
+
+function defineReactive(data,key,value){
+  
+  observe(value);
+  
+  Object.defineProperty(data,key,{
+    get(){
+      return value
+    },
+    set(newValue){
+      if(newValue == value) return;
+      observe(newValue);
+      value = newValue
+    }
+  })
+}
+
+export function observe(data) {
+  if(typeof data !== 'object' || data == null){
+    return;
+  }
+  return new Observer(data);
+}
+```
+
+
+
+
+
+
+
+
