@@ -3,8 +3,8 @@ pageType: home
 
 hero:
   name: 褚鹏飞的博客
-  text: Rspack-based Static Site Generator
-  tagline: Rspress tagline
+  # text: 定投改变命运
+  tagline: 读书、写作、投资、帮朋友、陪家人
   actions:
     - theme: brand
       text: 快速开始
@@ -14,7 +14,7 @@ hero:
       link: https://github.com/MagicalBridge
   image:
     src: /logo.jpeg
-    alt: Rspress Logo
+    alt: avator
 features:
   - title: Blazing fast build speed
     details: The core compilation module is based on the Rust front-end toolchain, providing a more ultimate development experience.
