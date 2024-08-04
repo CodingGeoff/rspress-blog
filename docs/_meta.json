@@ -1,22 +1,35 @@
 [
   {
-    "text": "算法",
-    "link": "/algorithm/leetcode/",
-    "activeMatch": "/algorithm/"
+    "text": "英语",
+    "link": "/english/",
+    "activeMatch": "/english/"
+  },
+  {"text": "区块链",
+  "link": "/blockchain/",
+  "activeMatch": "/blockchain/"},
+  {
+    "text":"留学",
+    "link": "/study-abroad/",
+    "activeMatch": "/study-abroad/"
   },
   {
-    "text": "Vue",
-    "link": "/vue/",
-    "activeMatch": "/vue/"
+    "text": "编程",
+    "link": "/programming/",
+    "activeMatch": "/programming/"
   },
   {
-    "text": "React",
-    "link": "/react/",
-    "activeMatch": "/react/"
+    "text": "生活",
+    "link": "/life/",
+    "activeMatch": "/life/"
   },
   {
-    "text": "Node.js",
-    "link": "/node/",
-    "activeMatch": "/node/"
+    "text": "随笔",
+    "link": "/essay/",
+    "activeMatch": "/essay/"
+  },
+  {
+    "text": "关于",
+    "link": "/about/",
+    "activeMatch": "/about/"
   }
 ]

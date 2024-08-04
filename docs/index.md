@@ -2,16 +2,18 @@
 pageType: home
 
 hero:
-  name: 褚鹏飞的博客
-  # text: 定投改变命运
-  tagline: 读书、写作、投资、帮朋友、陪家人
+  name: Learning Pathways of CodingGeoff 
+  # text: Explore, Learn, Grow.
+  title: 
+  tagline: 
+    Language Learning, Programming, and Careers
   actions:
     - theme: brand
       text: 快速开始
       link: /guide/
     - theme: alt
       text: Github
-      link: https://github.com/MagicalBridge
+      link: https://github.com/codinggeoff
   image:
     src: /logo.jpeg
     alt: avator
